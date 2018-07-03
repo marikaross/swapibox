@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
+import Header from './Header/Header.js';
 import './App.css';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      people: [],
-      planets: [],
-      vehicles: [],
-      favorites: []
+      cards:[],
+      scroll: {},
+      favorites: [],
+      buttons: [people: {active: false},
+                planets: {active: false},
+                starships:{active: false}]
     }
   }
 

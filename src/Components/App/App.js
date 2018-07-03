@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Header from './Header/Header.js';
+import Header from '../Header/Header.js';
+import CardContainer from '../CardContainer/CardContainer.js';
 import './App.css';
 
 class App extends Component {
@@ -9,9 +10,9 @@ class App extends Component {
       cards:[],
       scroll: {},
       favorites: [],
-      buttons: [people: {active: false},
-                planets: {active: false},
-                starships:{active: false}]
+      // buttons: [people: {active: false},
+      //           planets: {active: false},
+      //           starships:{active: false}]
     }
   }
 

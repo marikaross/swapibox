@@ -15,6 +15,11 @@ const CardContainer = ({cards}) => {
       />
     );
   });
+
+  /**
+   * this will accomplish the same thing as above but in a concise one line
+   *
+   */
   // const allCards = cards.map(card => <Card key={card.name} {...card}/>);
   return (
     <div>

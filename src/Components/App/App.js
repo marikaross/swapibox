@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import Header from '../Header/Header.js';
 import CardContainer from '../CardContainer/CardContainer.js';
 import './App.css';
+import { findPeople } from '../helper/api-caller.js';
+import Header from '../Header/Header.js';
+import CardContainer from '../CardContainer/CardContainer.js';
 
 class App extends Component {
   constructor() {
@@ -16,28 +19,34 @@ class App extends Component {
     }
   }
 
-  findPeople = () => {
+// componentDidMount() {
+//   fetch("https://swapi.co/api/")
+//     .then(response => response.json())
+//     .then
 
-  }
+// }
 
-  findPlanets = () => {
+getPeople() {
 
-  }
+}
 
-  findStarships = () => {
+getPlanet() {
 
-  }
+}
+
+getStarships() {
+
+}
+
+
 
   render() {
     return (
       <div className="App">
         <h1>Swapi-Box</h1>
         <Header 
-        findPeople={this.findPeople} 
-        findPlanets={this.findPlanets} 
-        findStarships={this.findStarships}
         />
-        <CardContainer scrollSummary={this.scrollSummary}/>
+        <CardContainer />
       </div>
     );
   }

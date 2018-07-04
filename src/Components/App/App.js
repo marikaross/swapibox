@@ -3,8 +3,8 @@ import Header from '../Header/Header.js';
 import CardContainer from '../CardContainer/CardContainer.js';
 import './App.css';
 import { findPeople } from '../helper/api-caller.js';
-import Header from '../Header/Header.js';
-import CardContainer from '../CardContainer/CardContainer.js';
+import { cleanPeople } from '../helper/cleaner.js';
+
 
 class App extends Component {
   constructor() {
@@ -17,6 +17,7 @@ class App extends Component {
       //           planets: {active: false},
       //           starships:{active: false}]
     }
+    this.getPeople = this.getPeople.bind(this)
   }
 
 // componentDidMount() {
@@ -26,11 +27,12 @@ class App extends Component {
 
 // }
 
-getPeople() {
-
+async getPeople() {
+  this.setState({cards: [...await findPeople()]})
 }
 
-getPlanet() {
+
+getPlanets() {
 
 }
 
@@ -45,8 +47,11 @@ getStarships() {
       <div className="App">
         <h1>Swapi-Box</h1>
         <Header 
+        getPeople={this.getPeople}
+        getPlanets={this.getPlanets}
+        getStarships={this.getStarships}
         />
-        <CardContainer />
+        <CardContainer cards={this.state.cards}/>
       </div>
     );
   }

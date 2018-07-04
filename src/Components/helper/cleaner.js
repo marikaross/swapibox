@@ -1,5 +1,5 @@
 const cleanPeople = (data) => {
-  const allPeople = data.results.map(person => {
+  const allPeople = data.map(person => {
     return {
       name: person.name,
       homeworld: person.homeworld.name,
@@ -7,10 +7,12 @@ const cleanPeople = (data) => {
       population: person.homeworld.population
     }
   })
+  console.log(cleanPeople)
   return allPeople
 }
 
 // const cleanScroll
 
+export { cleanPeople }
 
   

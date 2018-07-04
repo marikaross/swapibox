@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 const Header = (props) => {
   return (
     <div>
-      <button findPeople={props.findPeople}>People</button>
-      <button findPlanets={props.findPlanets}>Planets</button>
-      <button findStarships={props.findStarships}>Starships</button>
+      <button onClick={props.getPeople}>People</button>
+      <button onClick={props.getPlanets}>Planets</button>
+      <button onClick={props.getStarships}>Starships</button>
       <button className='favorites'>Favorites</button>
     </div>
     )

@@ -12,33 +12,33 @@ class App extends Component {
     this.state = {
       cards:[],
       scroll: {},
-      favorites: [],
+      favorites: []
       // buttons: [people: {active: false},
       //           planets: {active: false},
       //           starships:{active: false}]
-    }
-    this.getPeople = this.getPeople.bind(this)
+    };
+    this.getPeople = this.getPeople.bind(this);
   }
 
-// componentDidMount() {
-//   fetch("https://swapi.co/api/")
-//     .then(response => response.json())
-//     .then
+  // componentDidMount() {
+  //   fetch("https://swapi.co/api/")
+  //     .then(response => response.json())
+  //     .then
 
-// }
+  // }
 
-async getPeople() {
-  this.setState({cards: [...await findPeople()]})
-}
+  async getPeople() {
+    this.setState({cards: [...await findPeople()]});
+  }
 
 
-getPlanets() {
+  getPlanets() {
 
-}
+  }
 
-getStarships() {
+  getStarships() {
 
-}
+  }
 
 
 
@@ -46,10 +46,10 @@ getStarships() {
     return (
       <div className="App">
         <h1>Swapi-Box</h1>
-        <Header 
-        getPeople={this.getPeople}
-        getPlanets={this.getPlanets}
-        getStarships={this.getStarships}
+        <Header
+          getPeople={this.getPeople}
+          getPlanets={this.getPlanets}
+          getStarships={this.getStarships}
         />
         <CardContainer cards={this.state.cards}/>
       </div>

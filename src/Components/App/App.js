@@ -20,12 +20,13 @@ class App extends Component {
     this.getPeople = this.getPeople.bind(this)
   }
 
-// componentDidMount() {
-//   fetch("https://swapi.co/api/")
-//     .then(response => response.json())
-//     .then
-
-// }
+componentDidMount() {
+  let num = Math.floor(Math.random()*7)+1;
+  fetch(`https://swapi.co/api/films/${num}/`)
+    .then(response => response.json())
+    .then(results => cleanScroll(results))
+    .then(results => this.setState({scroll: { results }}))
+}
 
 async getPeople() {
   this.setState({cards: [...await findPeople()]})
@@ -42,6 +43,7 @@ getStarships() {
 
 
 
+
   render() {
     return (
       <div className="App">
@@ -50,6 +52,11 @@ getStarships() {
         getPeople={this.getPeople}
         getPlanets={this.getPlanets}
         getStarships={this.getStarships}
+        />
+        <Sidebar 
+        summary={opening_crawl} 
+        title={title} 
+        release={release-date} 
         />
         <CardContainer cards={this.state.cards}/>
       </div>

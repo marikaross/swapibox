@@ -1,4 +1,4 @@
-import { cleanPeople, cleanPlanet } from './cleaner.js';
+import { cleanPeople, cleanPlanet, cleanVehicles } from './cleaner.js';
 
 const findPeople = async () => {
   const url = `https://swapi.co/api/people`;
@@ -61,8 +61,14 @@ const moreMapping = async (allTheResidents) => {
     const residentNames = await results.name
     return residentNames
   })
-    return await Promise.all(fetchResidents)
-    
+    return await Promise.all(fetchResidents)   
+ }
+
+ const findVehicles = async () => {
+  const response = await fetch('https://swapi.co/api/starships/');
+  const results = await response.json()
+  const vehicles = results.results
+  return cleanVehicles(vehicles)
  }
 
 

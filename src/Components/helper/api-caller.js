@@ -41,8 +41,6 @@ const findPeople = async () => {
     const newPlanetInfo = planets.forEach((planet, i) => {
       planet.residents = names[i]
     })
-    console.log(planets)
-    //change value of the planet.resident
     return cleanPlanet(planets)
   }
 

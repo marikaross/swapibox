@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import Header from '../Header/Header.js';
 import CardContainer from '../CardContainer/CardContainer.js';
+import Sidebar from '../Sidebar/Sidebar.js';
 import './App.css';
-import { findPeople } from '../helper/api-caller.js';
-import { cleanPeople } from '../helper/cleaner.js';
+import { findPeople, findPlanets } from '../helper/api-caller.js';
+import { cleanPeople, cleanScroll } from '../helper/cleaner.js';
 
 
 class App extends Component {
@@ -20,25 +21,26 @@ class App extends Component {
     this.getPeople = this.getPeople.bind(this)
   }
 
-// componentDidMount() {
-//   fetch("https://swapi.co/api/")
-//     .then(response => response.json())
-//     .then
-
-// }
+componentDidMount() {
+  let num = Math.floor(Math.random()*7)+1;
+  fetch(`https://swapi.co/api/films/${num}/`)
+    .then(response => response.json())
+    .then(results => cleanScroll(results))
+    .then(results => this.setState({scroll: { ...results }}))
+}
 
 async getPeople() {
   this.setState({cards: [...await findPeople()]})
 }
 
 
-getPlanets() {
-
-}
+async getPlanets() {
+  this.setState({cards: [...await findPlanets]})}
 
 getStarships() {
 
 }
+
 
 
 
@@ -50,6 +52,9 @@ getStarships() {
         getPeople={this.getPeople}
         getPlanets={this.getPlanets}
         getStarships={this.getStarships}
+        />
+        <Sidebar 
+        summary={this.state.scroll} 
         />
         <CardContainer cards={this.state.cards}/>
       </div>

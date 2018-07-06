@@ -19,11 +19,10 @@ class App extends Component {
       //           starships:{active: false}]
     }
     this.getPeople = this.getPeople.bind(this)
-    // this.getPlanets = this.getPeople.bind(this)
+    this.getPlanets = this.getPlanets.bind(this)
   }
 
 componentDidMount() {
-  this.getPlanets()
   let num = Math.floor(Math.random()*7)+1;
   fetch(`https://swapi.co/api/films/${num}/`)
     .then(response => response.json())
@@ -37,7 +36,6 @@ async getPeople() {
 
 
 async getPlanets() {
-
   this.setState({cards: [...await findPlanets()]})
 }
 

@@ -20,7 +20,17 @@ const cleanScroll = (data) => {
 }
 
 const cleanPlanet = (data) => {
-
+  const planetInfo = data.map(planet => {
+    return {
+      name: planet.name,
+      terrain: planet.terrain,
+      climate: planet.climate,
+      population: planet.population,
+      residents: planet.residents
+    }
+  })
+  console.log(planetInfo)
+  return planetInfo
 }
 
 export { cleanPeople, cleanScroll, cleanPlanet }

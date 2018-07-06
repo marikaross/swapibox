@@ -19,6 +19,7 @@ class App extends Component {
       //           starships:{active: false}]
     }
     this.getPeople = this.getPeople.bind(this)
+    this.getPlanets = this.getPlanets.bind(this)
   }
 
 componentDidMount() {
@@ -35,7 +36,8 @@ async getPeople() {
 
 
 async getPlanets() {
-  this.setState({cards: [...await findPlanets]})}
+  this.setState({cards: [...await findPlanets()]})
+}
 
 getStarships() {
 

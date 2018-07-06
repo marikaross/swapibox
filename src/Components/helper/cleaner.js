@@ -20,7 +20,13 @@ const cleanScroll = (data) => {
 }
 
 const cleanPlanet = (data) => {
-
+  const planetInfo = {
+    name: data.name,
+    terrain: data.terrain,
+    climate: data.climate,
+    population: data.population,
+    residents: data.residents,
+  }
 }
 
 export { cleanPeople, cleanScroll, cleanPlanet }

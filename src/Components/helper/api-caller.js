@@ -1,4 +1,4 @@
-import { cleanPeople } from './cleaner.js';
+import { cleanPeople, cleanPlanet } from './cleaner.js';
 
 const findPeople = async () => {
   const url = `https://swapi.co/api/people`;
@@ -30,6 +30,44 @@ const findPeople = async () => {
     })
     return Promise.all(peopleSpecies)
   }
+
+  const findPlanets = async () => {
+    const url = `https://swapi.co/api/planets`;
+    const response = await fetch(url);
+    const results = await response.json();
+    const planets = results.results;
+    const residentPromise = await findResidents(planets)
+    const names = await Promise.all(residentPromise)
+    const newPlanetInfo = planets.forEach((planet, i) => {
+      planet.residents = names[i]
+    })
+    console.log(planets)
+    //change value of the planet.resident
+    return cleanPlanet(planets)
+  }
+
+  const findResidents = async (planets) => {
+    const getResidents = planets.map(async planet => {
+      if(planet.residents.length) {
+        return moreMapping(planet.residents)
+      }
+    })
+ return await getResidents
+}
+
+const moreMapping = async (allTheResidents) => {
+  const fetchResidents = allTheResidents.map(async resident => {
+    // console.log(resident)
+    const response = await fetch(resident)
+    const results =  await response.json()
+    const residentNames = await results.name
+    return residentNames
+  })
+    return await Promise.all(fetchResidents)
+    
+ }
+
+
   
  
- export { findPeople }
+ export { findPeople, findPlanets }

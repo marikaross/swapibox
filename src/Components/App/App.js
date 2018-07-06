@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import Header from '../Header/Header.js';
 import CardContainer from '../CardContainer/CardContainer.js';
+import Sidebar from '../Sidebar/Sidebar.js';
 import './App.css';
-import { findPeople } from '../helper/api-caller.js';
-import { cleanPeople } from '../helper/cleaner.js';
+import { findPeople, findPlanets } from '../helper/api-caller.js';
+import { cleanPeople, cleanScroll } from '../helper/cleaner.js';
 
 
 class App extends Component {
@@ -25,7 +26,7 @@ componentDidMount() {
   fetch(`https://swapi.co/api/films/${num}/`)
     .then(response => response.json())
     .then(results => cleanScroll(results))
-    .then(results => this.setState({scroll: { results }}))
+    .then(results => this.setState({scroll: { ...results }}))
 }
 
 async getPeople() {
@@ -33,9 +34,8 @@ async getPeople() {
 }
 
 
-getPlanets() {
-
-}
+async getPlanets() {
+  this.setState({cards: [...await findPlanets]})}
 
 getStarships() {
 
@@ -54,9 +54,7 @@ getStarships() {
         getStarships={this.getStarships}
         />
         <Sidebar 
-        summary={opening_crawl} 
-        title={title} 
-        release={release-date} 
+        summary={this.state.scroll} 
         />
         <CardContainer cards={this.state.cards}/>
       </div>

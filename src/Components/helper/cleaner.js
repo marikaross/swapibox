@@ -7,19 +7,22 @@ const cleanPeople = (data) => {
       population: person.homeworld.population
     }
   })
-  console.log(cleanPeople)
   return allPeople
 }
 
 const cleanScroll = (data) => {
   const filmInfo = {
     summary: data.opening_crawl,
-    title: data.itle
-    releaseDate: data.release_date,
+    title: data.title,
+    releaseDate: data.release_date
   }
   return filmInfo
 }
 
-export { cleanPeople, cleanScroll }
+const cleanPlanet = (data) => {
+
+}
+
+export { cleanPeople, cleanScroll, cleanPlanet }
 
   

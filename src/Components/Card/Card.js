@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Card = ({name, homeworld, species, population, terrain, climate, residents, model, class, passengers}) => {
+const Card = ({name, homeworld, species, population, terrain, climate, residents, model, type, passengers}) => {
  const peopleCard =
     <article className='peopleCard' key={name}>
       <h2>{name}</h2>
@@ -23,7 +23,7 @@ const Card = ({name, homeworld, species, population, terrain, climate, residents
     <article className='vehicleCard' key={name}>
       <h2>{name}</h2>
       <h3>model:{model}</h3>
-      <h3>class: {class}</h3>
+      <h3>class: {type}</h3>
       <h3># of passengers: {passengers}</h3>
     </article>
 

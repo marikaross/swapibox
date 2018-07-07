@@ -13,3 +13,9 @@ const Header = (props) => {
 }
 
 export default Header;
+
+Header.propTypes = {
+  getPeople: PropTypes.func.isRequired,
+  getPlanets: PropTypes.func.isRequired,
+  getStarships: PropTypes.func.isRequired
+}

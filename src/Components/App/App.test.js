@@ -2,21 +2,25 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import { shallow } from 'enzyme';
-import { findPeople, findPlanets, findVehicles } from '../helper/api-caller.js';
+// import { findPlanets, findVehicles } from '../helper/api-caller.js';
 
-jest.mock('../helper/api-caller.js');
+// jest.mock('../helper/api-caller.js');
 
 
 describe('App component', () => {
 
 
   it('getPeople calls findPeople and sets the state.cards', async () => {
-    let wrapper = shallow(<App />);
-    
-    await wrapper.instance().getPeople();
+    // let wrapper = shallow(<App />);
+    // // window.fetch = jest.fn().mockImplementation(() => Promise.resolve({json: () => Promise.resolve(mockCards)})
 
-    expect(findPeople).toHaveBeenCalled();
-    expect(wrapper.state('cards')).toEqual()
+    // // wrapper.setState({cards: []});
+
+    // expect(wrapper.state('cards')).toEqual([])
+    // // const mockCards = [{}, {}]
+    
+    // // await wrapper.instance().getPeople();
+
   });
 
   // it('after getPeople is called that state should be set', async () => {

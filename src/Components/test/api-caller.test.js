@@ -18,11 +18,11 @@ describe('findPeople', () => {
     const url = 'https://swapi.co/api/people'
     findPeople()
     expect(window.fetch).toHaveBeenCalledWith(url)
-  })
+  });
 
   it.skip('after get findPeople gets called, the state should be reset', () => {
     const expectedState = {}
-  })
+  });
 
   it.skip('findHomeworld should be called with the correct parameters', async () => {
     let mockFindHomeworld = jest.fn()
@@ -30,5 +30,5 @@ describe('findPeople', () => {
     await findPeople()
     await expect(mockFindHomeworld).toHaveBeenCalledWith(expectedParams)
 
-  })
+  });
 })

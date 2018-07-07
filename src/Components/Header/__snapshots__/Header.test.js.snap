@@ -1,0 +1,199 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`header should match the snapshot with all data passed in correctly 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Header />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <button
+          className="people-button"
+          onClick={undefined}
+>
+          People
+</button>,
+        <button
+          className="planet-button"
+          onClick={undefined}
+>
+          Planets
+</button>,
+        <button
+          className="vehicles-button"
+          onClick={undefined}
+>
+          Starships
+</button>,
+        <button
+          className="favorites"
+>
+          Favorites
+</button>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "People",
+          "className": "people-button",
+          "onClick": undefined,
+        },
+        "ref": null,
+        "rendered": "People",
+        "type": "button",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Planets",
+          "className": "planet-button",
+          "onClick": undefined,
+        },
+        "ref": null,
+        "rendered": "Planets",
+        "type": "button",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Starships",
+          "className": "vehicles-button",
+          "onClick": undefined,
+        },
+        "ref": null,
+        "rendered": "Starships",
+        "type": "button",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Favorites",
+          "className": "favorites",
+        },
+        "ref": null,
+        "rendered": "Favorites",
+        "type": "button",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <button
+            className="people-button"
+            onClick={undefined}
+>
+            People
+</button>,
+          <button
+            className="planet-button"
+            onClick={undefined}
+>
+            Planets
+</button>,
+          <button
+            className="vehicles-button"
+            onClick={undefined}
+>
+            Starships
+</button>,
+          <button
+            className="favorites"
+>
+            Favorites
+</button>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "People",
+            "className": "people-button",
+            "onClick": undefined,
+          },
+          "ref": null,
+          "rendered": "People",
+          "type": "button",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Planets",
+            "className": "planet-button",
+            "onClick": undefined,
+          },
+          "ref": null,
+          "rendered": "Planets",
+          "type": "button",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Starships",
+            "className": "vehicles-button",
+            "onClick": undefined,
+          },
+          "ref": null,
+          "rendered": "Starships",
+          "type": "button",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Favorites",
+            "className": "favorites",
+          },
+          "ref": null,
+          "rendered": "Favorites",
+          "type": "button",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

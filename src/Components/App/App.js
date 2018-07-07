@@ -3,7 +3,7 @@ import Header from '../Header/Header.js';
 import CardContainer from '../CardContainer/CardContainer.js';
 import Sidebar from '../Sidebar/Sidebar.js';
 import './App.css';
-import { findPeople, findPlanets } from '../helper/api-caller.js';
+import { findPeople, findPlanets, findVehicles } from '../helper/api-caller.js';
 import { cleanPeople, cleanScroll } from '../helper/cleaner.js';
 
 
@@ -39,8 +39,8 @@ class App extends Component {
     this.setState({cards: [...await findPlanets()]});
   }
 
-  getStarships() {
-
+   async getStarships() {
+    this.setState({cards: [...await findVehichles()]})
   }
 
 

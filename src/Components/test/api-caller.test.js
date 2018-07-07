@@ -20,10 +20,15 @@ describe('findPeople', () => {
     expect(window.fetch).toHaveBeenCalledWith(url)
   })
 
-  it('findHomeworld should be called with the correct parameters', () => {
+  it('after get findPeople gets called, the state should be reset', () => {
+    const expectedState = {}
+  })
+
+  it.only('findHomeworld should be called with the correct parameters', async () => {
+    let mockFindHomeworld = jest.fn()
     const expectedParams = mockPersonData
-    findPeople()
-    expect(mockFindHomeworld).toHaveBeenCalledWith(expectedParams)
+    await findPeople()
+    await expect(mockFindHomeworld).toHaveBeenCalledWith(expectedParams)
 
   })
 })

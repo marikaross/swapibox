@@ -1,0 +1,148 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardContainer should match the snapshot with all data passed in correctly 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <CardContainer
+    cards={
+        Array [
+            Object {
+              "homeworld": "farm",
+              "name": "Bingo",
+              "population": 15,
+              "species": "canine",
+            },
+            Object {
+              "homeworld": "fish-bowl",
+              "name": "Wanda",
+              "population": 1,
+              "species": "fish",
+            },
+          ]
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <Card
+          homeworld="farm"
+          name="Bingo"
+          population={15}
+          species="canine"
+/>,
+        <Card
+          homeworld="fish-bowl"
+          name="Wanda"
+          population={1}
+          species="fish"
+/>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": "Bingo",
+        "nodeType": "function",
+        "props": Object {
+          "homeworld": "farm",
+          "name": "Bingo",
+          "population": 15,
+          "species": "canine",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "Wanda",
+        "nodeType": "function",
+        "props": Object {
+          "homeworld": "fish-bowl",
+          "name": "Wanda",
+          "population": 1,
+          "species": "fish",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Card
+            homeworld="farm"
+            name="Bingo"
+            population={15}
+            species="canine"
+/>,
+          <Card
+            homeworld="fish-bowl"
+            name="Wanda"
+            population={1}
+            species="fish"
+/>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": "Bingo",
+          "nodeType": "function",
+          "props": Object {
+            "homeworld": "farm",
+            "name": "Bingo",
+            "population": 15,
+            "species": "canine",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "Wanda",
+          "nodeType": "function",
+          "props": Object {
+            "homeworld": "fish-bowl",
+            "name": "Wanda",
+            "population": 1,
+            "species": "fish",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

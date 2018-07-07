@@ -14,3 +14,8 @@ const Sidebar = ({ summary }) => {
 }
 
 export default Sidebar;
+
+
+Sidebar.propTypes = {
+  summary: PropTypes.object.isRequired,
+};

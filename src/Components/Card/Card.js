@@ -33,3 +33,17 @@ const Card = ({name, homeworld, species, population, terrain, climate, residents
 
 
 export default Card;
+
+
+Card.propTypes = {
+  name: PropTypes.string,
+  homeworld: PropTypes.string,
+  species: PropTypes.string,
+  population: PropTypes.number,
+  terrain: PropTypes.string,
+  climate: PropTypes.string,
+  residents: PropTypes.string,
+  model: PropTypes.string,
+  type: PropTypes.string,
+  passengers: PropTypes.number
+};

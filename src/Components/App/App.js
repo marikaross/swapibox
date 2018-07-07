@@ -13,35 +13,35 @@ class App extends Component {
     this.state = {
       cards:[],
       scroll: {},
-      favorites: [],
+      favorites: []
       // buttons: [people: {active: false},
       //           planets: {active: false},
       //           starships:{active: false}]
-    }
-    this.getPeople = this.getPeople.bind(this)
-    this.getPlanets = this.getPlanets.bind(this)
+    };
+    this.getPeople = this.getPeople.bind(this);
+    this.getPlanets = this.getPlanets.bind(this);
   }
 
-componentDidMount() {
-  let num = Math.floor(Math.random()*7)+1;
-  fetch(`https://swapi.co/api/films/${num}/`)
-    .then(response => response.json())
-    .then(results => cleanScroll(results))
-    .then(results => this.setState({scroll: { ...results }}))
-}
+  componentDidMount() {
+    let num = Math.floor(Math.random()*7)+1;
+    fetch(`https://swapi.co/api/films/${num}/`)
+      .then(response => response.json())
+      .then(results => cleanScroll(results))
+      .then(results => this.setState({scroll: { ...results }}));
+  }
 
-async getPeople() {
-  this.setState({cards: [...await findPeople()]})
-}
+ getPeople = async () => {
+    this.setState({cards: await findPeople()});
+  }
 
 
-async getPlanets() {
-  this.setState({cards: [...await findPlanets()]})
-}
+  async getPlanets() {
+    this.setState({cards: [...await findPlanets()]});
+  }
 
-getStarships() {
+  getStarships() {
 
-}
+  }
 
 
 
@@ -51,12 +51,12 @@ getStarships() {
       <div className="App">
         <h1>Swapi-Box</h1>
         <Header 
-        getPeople={this.getPeople}
-        getPlanets={this.getPlanets}
-        getStarships={this.getStarships}
+          getPeople={this.getPeople}
+          getPlanets={this.getPlanets}
+          getStarships={this.getStarships}
         />
         <Sidebar 
-        summary={this.state.scroll} 
+          summary={this.state.scroll} 
         />
         <CardContainer cards={this.state.cards}/>
       </div>

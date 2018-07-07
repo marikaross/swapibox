@@ -16,8 +16,7 @@ const findPeople = async () => {
       const homeworld = await response.json()
       const wholePerson = {...person, homeworld}
       return wholePerson
-    })
-  
+    }) 
     return Promise.all(peopleHome)
   }
 
@@ -74,4 +73,4 @@ const moreMapping = async (allTheResidents) => {
 
   
  
- export { findPeople, findPlanets }
+ export { findPeople, findHomeworld, findSpecies, findPlanets, findResidents, moreMapping, findVehicles }

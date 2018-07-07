@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Card = ({name, homeworld, species, population, terrain, climate, residents, model, type, passengers}) => {
- const peopleCard =
+  const peopleCard =
     <article className='peopleCard' key={name}>
       <h2>{name}</h2>
       <h3>homeworld: {homeworld}</h3>
@@ -28,8 +28,8 @@ const Card = ({name, homeworld, species, population, terrain, climate, residents
     </article>
 
 
-  return homeworld ? peopleCard : planetCard
-}
+  return homeworld ? peopleCard : planetCard;
+};
 
 
 export default Card;

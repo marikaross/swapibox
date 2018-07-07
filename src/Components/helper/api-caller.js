@@ -54,7 +54,6 @@ const findPeople = async () => {
 
 const moreMapping = async (allTheResidents) => {
   const fetchResidents = allTheResidents.map(async resident => {
-    // console.log(resident)
     const response = await fetch(resident)
     const results =  await response.json()
     const residentNames = await results.name

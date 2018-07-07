@@ -19,24 +19,24 @@ describe('App component', () => {
     expect(wrapper.state('cards')).toEqual()
   });
 
-  it('after getPeople is called that state should be set', async () => {
-    const expected = [{name: 'Bingo', 
-      homeworld: 'farm', 
-      species: 'canine', 
-      population: 15 },
-      {name: 'Wanda',
-      homeworld: 'fish-bowl',
-      species: 'fish',
-      population: 1}
-    ]
-      wrapper.setState({ cards: expected })
+  // it('after getPeople is called that state should be set', async () => {
+  //   const expected = [{name: 'Bingo', 
+  //     homeworld: 'farm', 
+  //     species: 'canine', 
+  //     population: 15 },
+  //     {name: 'Wanda',
+  //     homeworld: 'fish-bowl',
+  //     species: 'fish',
+  //     population: 1}
+  //   ]
+  //     wrapper.setState({ cards: expected })
 
-      // Execution
-      await wrapper.instance().getPeople()
+  //     // Execution
+  //     await wrapper.instance().getPeople()
       
-      // Expectation
-      expect(wrapper.state('cards')).toEqual(expected)
-  })
+  //     // Expectation
+  //     expect(wrapper.state('cards')).toEqual(expected)
+  // })
 
  
 });

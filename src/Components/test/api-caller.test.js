@@ -14,17 +14,17 @@ describe('findPeople', () => {
     window.fetch = jest.fn().mockImplementation(() => Promise.resolve({json: () => Promise.resolve(mockPersonData)}))
   })
 
-  it('should call fetch with the correct parameters', () => {
+  it.skip('should call fetch with the correct parameters', () => {
     const url = 'https://swapi.co/api/people'
     findPeople()
     expect(window.fetch).toHaveBeenCalledWith(url)
   })
 
-  it('after get findPeople gets called, the state should be reset', () => {
+  it.skip('after get findPeople gets called, the state should be reset', () => {
     const expectedState = {}
   })
 
-  it.only('findHomeworld should be called with the correct parameters', async () => {
+  it.skip('findHomeworld should be called with the correct parameters', async () => {
     let mockFindHomeworld = jest.fn()
     const expectedParams = mockPersonData
     await findPeople()

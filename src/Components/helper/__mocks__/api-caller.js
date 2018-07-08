@@ -3,15 +3,15 @@
 const mockCards = [{}, {}]
 
 
-const findPeople = jest.fn().mockImplementation(() => (
-  Promise.resolve(mockCards)
+const findPeople = jest.fn().mockImplementation(() => Promise.resolve({json: () => {
+      Promise.resolve(mockCards)
 ))
 
 const findPlanets = jest.fn().mockImplementation(() => (
   Promise.resolve()
 ))
 
-const findVehicles = jest.fn().mockIplementation(() => (
+const findVehicles = jest.fn().mockImplementation(() => (
   Promise.resolve()
 ))
 

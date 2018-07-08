@@ -14,12 +14,7 @@ class App extends Component {
       cards:[],
       scroll: {},
       favorites: []
-      // buttons: [people: {active: false},
-      //           planets: {active: false},
-      //           starships:{active: false}]
     };
-    this.getPeople = this.getPeople.bind(this);
-    this.getPlanets = this.getPlanets.bind(this);
   }
 
   componentDidMount() {
@@ -35,12 +30,12 @@ class App extends Component {
   }
 
 
-  async getPlanets() {
+  getPlanets = async () => {
     this.setState({cards: [...await findPlanets()]});
   }
 
-   async getStarships() {
-    this.setState({cards: [...await findVehichles()]})
+  getStarships = async ()  => {
+    this.setState({cards: [...await findVehicles()]})
   }
 
 

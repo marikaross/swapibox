@@ -21,7 +21,6 @@ const cleanScroll = (data) => {
 
 const cleanPlanet = (data) => {
   const planetInfo = data.map(planet => {
-    console.log(planet)
     return {
       name: planet.name,
       terrain: planet.terrain,
@@ -34,7 +33,15 @@ const cleanPlanet = (data) => {
 }
 
 const cleanVehicles = (data) => {
-
+  const vehicleInfo = data.map(vehicle => {
+    return {
+      name: vehicle.name,
+      model: vehicle.model,
+      starship_class: vehicle.starship_class,
+      passengers: vehicle.passengers
+    }
+  })
+  return vehicleInfo
 }
 
 export { cleanPeople, cleanScroll, cleanPlanet, cleanVehicles }

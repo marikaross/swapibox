@@ -1,4 +1,5 @@
 const cleanPeople = (data) => {
+  console.log(data)
   const allPeople = data.map(person => {
     return {
       name: person.name,

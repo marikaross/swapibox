@@ -48,6 +48,7 @@ ShallowWrapper {
           species="fish"
 />,
       ],
+      "className": "cardContainer",
     },
     "ref": null,
     "rendered": Array [
@@ -102,6 +103,7 @@ ShallowWrapper {
             species="fish"
 />,
         ],
+        "className": "cardContainer",
       },
       "ref": null,
       "rendered": Array [

@@ -1,6 +1,6 @@
 import React from 'react';
 import { findPeople, findHomeworld, findSpecies, findPlanets, findResidents, moreMapping, findVehicles } from '../helper/api-caller.js'
-import { mockPersonData } from '../helper/mockPersonData.js' 
+import { rawPersonData } from '../helper/mockPersonData.js' 
 
 
 describe('findPeople', () => {
@@ -11,10 +11,10 @@ describe('findPeople', () => {
   beforeEach(() => {
     let mockFindHomeworld = jest.fn()
     let mockFindSpecies = jest.fn()
-    window.fetch = jest.fn().mockImplementation(() => Promise.resolve({json: () => Promise.resolve(mockPersonData)}))
+    window.fetch = jest.fn().mockImplementation(() => Promise.resolve({json: () => Promise.resolve(rawPersonData)}))
   })
 
-  it.skip('should call fetch with the correct parameters', () => {
+  it.only('should call fetch with the correct parameters', () => {
     const url = 'https://swapi.co/api/people'
     findPeople()
     expect(window.fetch).toHaveBeenCalledWith(url)

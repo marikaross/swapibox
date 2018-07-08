@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Card = ({name, homeworld, species, population, terrain, climate, residents, model, type, passengers}) => {
+const Card = ({name, homeworld, species, population, terrain, climate, residents, model, starship_class, passengers}) => {
   const peopleCard =
     <article className='peopleCard' key={name}>
       <h2>{name}</h2>
@@ -22,13 +22,19 @@ const Card = ({name, homeworld, species, population, terrain, climate, residents
   const vehicleCard = 
     <article className='vehicleCard' key={name}>
       <h2>{name}</h2>
-      <h3>model:{model}</h3>
-      <h3>class: {type}</h3>
+      <h3>model: {model}</h3>
+      <h3>class: {starship_class}</h3>
       <h3># of passengers: {passengers}</h3>
     </article>
 
 
-  return homeworld ? peopleCard : planetCard;
+  if (homeworld) {
+    return peopleCard
+  } else if (terrain) {
+    return planetCard
+  } else {
+    return vehicleCard
+  }
 };
 
 

@@ -33,12 +33,12 @@ const cleanPlanet = (data) => {
 }
 
 const cleanVehicles = (data) => {
-  const vehicleInfo = data.map(planet => {
+  const vehicleInfo = data.map(vehicle => {
     return {
       name: vehicle.name,
       model: vehicle.model,
-      class: vehicle.class,
-      # of passengers: vehicle.passengers
+      starship_class: vehicle.starship_class,
+      passengers: vehicle.passengers
     }
   })
   return vehicleInfo

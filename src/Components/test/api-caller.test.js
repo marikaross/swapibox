@@ -152,6 +152,7 @@ describe('findVehicles', () => {
   beforeEach(() => {
     apiCaller = new ApiCallers
     window.fetch = jest.fn().mockImplementation(() => Promise.resolve({json: () => Promise.resolve(rawVehicleData)}))
+    cleaner.cleanVehicles = jest.fn()
 
   })
 
@@ -160,4 +161,12 @@ describe('findVehicles', () => {
     apiCaller.findVehicles()
     expect(window.fetch).toHaveBeenCalledWith(url)
   })
+
+  it('should call cleanVehicles with the correct params', async () => {
+    const expectedParams = rawVehicleData.results
+    await apiCaller.findVehicles()
+    expect(cleaner.cleanVehicles).toHaveBeenCalledWith(expectedParams)
+
+  })
+
 })

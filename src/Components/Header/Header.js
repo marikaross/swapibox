@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './Header.css';
 
 const Header = (props) => {
   return (
-    <div>
+    <div className="header">
+      <img src={require ('../../images/starWarsLogo.jpg')} />
       <button className="people-button" onClick={props.getPeople}>People</button>
       <button className="planet-button" onClick={props.getPlanets}>Planets</button>
       <button className="vehicles-button" onClick={props.getStarships}>Starships</button>

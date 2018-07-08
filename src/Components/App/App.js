@@ -44,7 +44,6 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Swapi-Box</h1>
         <Header 
           getPeople={this.getPeople}
           getPlanets={this.getPlanets}

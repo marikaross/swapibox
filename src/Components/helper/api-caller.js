@@ -19,7 +19,6 @@ findPeople = async () => {
     const peopleHome = people.map(async person => {
       const response = await fetch(person.homeworld)
       const homeworld = await response.json()
-      // console.log(homeworld, '****')
       const wholePerson = {...person, homeworld}
       return wholePerson
     }) 

@@ -2,7 +2,7 @@ import React from 'react';
 import ApiCallers from '../helper/api-caller.js'
 import * as cleaner from '../helper/cleaner.js' 
 import { rawPersonData, apiCallerPersonData, mockPersonData, findHomeworldPromiseData, findSpeciesPromiseData, finalPeopleObject} from '../helper/mockPersonData.js';
-import { apiCallerPlanetData } from '../helper/mockPlanetData.js'
+import { apiCallerPlanetData, mockPlanetData, rawPlanetData } from '../helper/mockPlanetData.js'
 
 
 
@@ -40,6 +40,7 @@ describe('findPeople', () => {
     await apiCaller.findPeople()
     expect(apiCaller.findSpecies).toHaveBeenCalledWith(expectedParams);
   });
+  
   it('should call cleanPeople with the correct parameters', async () => {
     const expectedParams = 2
    await apiCaller.findPeople()
@@ -87,7 +88,6 @@ describe ('findSpecies', () => {
   })
 
   it.skip('should return an array of objects with all pertinent data', async() => {
-    console.log(mockPersonData)
     const expected = finalPeopleObject
     const results = await apiCaller.findSpecies(findSpeciesPromiseData)
     expect(results).toEqual(expected)
@@ -100,8 +100,34 @@ describe('findPlanets', () => {
 
   beforeEach(() => {
     apiCaller = new ApiCallers()
-    apiCaller.findResidents = jest.fn().mockImplementation(() =>  Promise.resolve(1))
-    apiCaller.residentsMap = jest.fn().nockImplementation(() => Promise.resolve({}))
+    apiCaller.findResidents = jest.fn().mockImplementation(() => Promise.resolve([1]))
+    apiCaller.residentsMap = jest.fn().mockImplementation(() => Promise.resolve([3]))
+    cleaner.cleanPlanets = jest.fn()
+    window.fetch = jest.fn().mockImplementation(() => Promise.resolve(
+        { json: () => Promise.resolve(rawPlanetData) }
+        )
+    )
+
+  })
+ 
+
+  it('should call fetch with the correct url', async () => {
+    const url = 'https://swapi.co/api/planets'
+    console.log(apiCaller.findPlanets.toString())
+    await apiCaller.findPlanets()
+    expect(window.fetch).toHaveBeenCalledWith(url)
+  })
+
+  it('findResidents should be called with the correct parameters', async () => {
+    const expectedParams = rawPlanetData.results
+    await apiCaller.findPlanets()
+    expect(apiCaller.findResidents).toHaveBeenCalledWith(expectedParams)
+  })
+
+  it('it should call cleanPlanets with the correct parameters', async () => {
+    const expectedParams = 3
+    await apiCaller.findPlanets()
+    expect(cleaner.cleanPlanets).toHaveBeenCalledWith(expectedParams)
   })
 
 

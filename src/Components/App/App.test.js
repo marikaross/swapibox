@@ -41,6 +41,7 @@ describe('App component', () => {
   //     // Expectation
   //     expect(wrapper.state('cards')).toEqual(expected)
   // })
-
+// it catches an error if findPeople returns one
+// expect(result).rejects.toEqual()
  
 });

@@ -49,10 +49,12 @@ class App extends Component {
           getPlanets={this.getPlanets}
           getStarships={this.getStarships}
         />
-        <Sidebar 
-          summary={this.state.scroll} 
-        />
-        <CardContainer cards={this.state.cards}/>
+        <div className="body">
+          <Sidebar 
+            summary={this.state.scroll} 
+          />
+          <CardContainer cards={this.state.cards}/>
+        </div>
       </div>
     );
   }

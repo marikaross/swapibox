@@ -18,6 +18,7 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
+        <h2 />,
         <button
           className="people-button"
           onClick={undefined}
@@ -42,9 +43,19 @@ ShallowWrapper {
           Favorites
 </button>,
       ],
+      "className": "header",
     },
     "ref": null,
     "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": "h2",
+      },
       Object {
         "instance": null,
         "key": undefined,
@@ -106,6 +117,7 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
+          <h2 />,
           <button
             className="people-button"
             onClick={undefined}
@@ -130,9 +142,19 @@ ShallowWrapper {
             Favorites
 </button>,
         ],
+        "className": "header",
       },
       "ref": null,
       "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": "h2",
+        },
         Object {
           "instance": null,
           "key": undefined,

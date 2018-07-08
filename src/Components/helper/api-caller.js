@@ -1,16 +1,21 @@
 import { cleanPeople, cleanPlanet, cleanVehicles } from './cleaner.js';
 
-const findPeople = async () => {
+export default class ApiCallers {
+  constructor() {
+
+  }
+
+findPeople = async () => {
   const url = `https://swapi.co/api/people`;
   const response = await fetch(url)
   const results = await response.json()
   const everybody = results.results
-  const homeworldPromise = await findHomeworld(everybody)
-  const speciesPromise = await findSpecies(homeworldPromise)
+  const homeworldPromise = await this.findHomeworld(everybody)
+  const speciesPromise = await this.findSpecies(homeworldPromise)
   return cleanPeople(speciesPromise)
   }
 
- const findHomeworld = (people) => {
+ findHomeworld = (people) => {
     const peopleHome = people.map(async person => {
       const response = await fetch(person.homeworld)
       const homeworld = await response.json()
@@ -20,7 +25,7 @@ const findPeople = async () => {
     return Promise.all(peopleHome)
   }
 
-  const findSpecies = (people) => {
+findSpecies = (people) => {
     const peopleSpecies = people.map(async person => {
       const response = await fetch(person.species)
       const species = await response.json()
@@ -30,12 +35,12 @@ const findPeople = async () => {
     return Promise.all(peopleSpecies)
   }
 
-  const findPlanets = async () => {
+findPlanets = async () => {
     const url = `https://swapi.co/api/planets`;
     const response = await fetch(url);
     const results = await response.json();
     const planets = results.results;
-    const residentPromise = await findResidents(planets)
+    const residentPromise = await this.findResidents(planets)
     const names = await Promise.all(residentPromise)
     const newPlanetInfo = planets.forEach((planet, i) => {
       planet.residents = names[i]
@@ -43,16 +48,16 @@ const findPeople = async () => {
     return cleanPlanet(planets)
   }
 
-  const findResidents = async (planets) => {
+findResidents = async (planets) => {
     const getResidents = planets.map(async planet => {
       if(planet.residents.length) {
-        return moreMapping(planet.residents)
+        return this.residentsMap(planet.residents)
       }
     })
  return await getResidents
 }
 
-const moreMapping = async (allTheResidents) => {
+residentsMap = async (allTheResidents) => {
   const fetchResidents = allTheResidents.map(async resident => {
     const response = await fetch(resident)
     const results =  await response.json()
@@ -62,14 +67,15 @@ const moreMapping = async (allTheResidents) => {
     return await Promise.all(fetchResidents)   
  }
 
- const findVehicles = async () => {
+ findVehicles = async () => {
   const response = await fetch('https://swapi.co/api/starships/');
   const results = await response.json()
   const vehicles = results.results
   return cleanVehicles(vehicles)
  }
+}
 
 
   
  
- export { findPeople, findHomeworld, findSpecies, findPlanets, findResidents, moreMapping, findVehicles }
+ // export { findPeople, findHomeworld, findSpecies, findPlanets, findResidents, residentsMap, findVehicles }

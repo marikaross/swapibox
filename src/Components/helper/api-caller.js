@@ -20,6 +20,7 @@ findPeople = async () => {
       const response = await fetch(person.homeworld)
       const homeworld = await response.json()
       const wholePerson = {...person, homeworld}
+      console.log(wholePerson)
       return wholePerson
     }) 
     return Promise.all(peopleHome)

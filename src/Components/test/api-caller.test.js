@@ -1,7 +1,8 @@
 import React from 'react';
 import ApiCallers from '../helper/api-caller.js'
 import * as cleaner from '../helper/cleaner.js' 
-import { rawPersonData } from '../helper/mockPersonData.js' 
+import { rawPersonData, apiCallerPersonData, mockPersonData, findHomeworldPromiseData} from '../helper/mockPersonData.js';
+import { apiCallerPlanetData } from '../helper/mockPlanetData.js'
 
 
 
@@ -44,17 +45,41 @@ describe('findPeople', () => {
    await apiCaller.findPeople()
    expect(cleaner.cleanPeople).toHaveBeenCalledWith(expectedParams);
   });
-  it('throws an error if the status is not ok')
 
 
 })
 
-describe('findPlanets', => {
+describe('findHomeworld', () => {
+  let apiCaller
+
+  beforeEach(() => {
+    apiCaller = new ApiCallers()
+    window.fetch = jest.fn().mockImplementation(() => Promise.resolve(
+      {json: () => Promise.resolve(apiCallerPersonData)}))
+  })
+
+  it('should call fetch with the correct parameters', async () => {
+    const url = 'https://swapi.co/api/planets/1/'
+    await apiCaller.findHomeworld(apiCallerPersonData)
+    expect(window.fetch).toHaveBeenCalledWith(url)
+  })
+
+  it.only('should return a people object array with homeworld in it', async () => {
+     const url = 'https://swapi.co/api/planets/1/'
+    const expected = findHomeworldPromiseData
+    const results = await apiCaller.findHomeworld(apiCallerPersonData)
+   console.log(results)
+    expect(results).resolves.toBe(expected);
+
+  })
+})
+
+describe('findPlanets', () => {
   let apiCaller
 
   beforeEach(() => {
     apiCaller = new ApiCallers()
     apiCaller.findResidents = jest.fn().mockImplementation(() =>  Promise.resolve(1))
-    
+    apiCaller.residentsMap = jest.fn().nockImplementation(() => Promise.resolve({}))
   })
 })

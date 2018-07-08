@@ -41,6 +41,7 @@ findPlanets = async () => {
     const results = await response.json();
     const planets = results.results;
     const residentPromise = await this.findResidents(planets)
+    
     const names = await Promise.all(residentPromise)
     const newPlanetInfo = planets.forEach((planet, i) => {
       planet.residents = names[i]
@@ -74,8 +75,3 @@ residentsMap = async (allTheResidents) => {
   return cleanVehicles(vehicles)
  }
 }
-
-
-  
- 
- // export { findPeople, findHomeworld, findSpecies, findPlanets, findResidents, residentsMap, findVehicles }

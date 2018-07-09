@@ -5,14 +5,14 @@ import './Header.css';
 const Header = (props) => {
   return (
     <div className="header">
-      <img className="logo" src={require ('../../images/starWarsLogo.jpg')} />
+      <img className="logo" src={require('../../images/starWarsLogo.jpg')} />
       <button className="people-button" onClick={props.getPeople}>People</button>
       <button className="planet-button" onClick={props.getPlanets}>Planets</button>
       <button className="vehicles-button" onClick={props.getStarships}>Starships</button>
       <button className='favorites'>Favorites</button>
     </div>
-    )
-}
+  );
+};
 
 export default Header;
 
@@ -20,4 +20,4 @@ Header.propTypes = {
   getPeople: PropTypes.func.isRequired,
   getPlanets: PropTypes.func.isRequired,
   getStarships: PropTypes.func.isRequired
-}
+};

@@ -1,0 +1,6 @@
+/src/Components/**/*.test.js
+/src/Components/test/*.test.js
+/src/Components/helper/mockPersonData.js
+/src/Components/helper/mockPlanetData.js
+/src/Components/helper/mockScrollData.js
+/src/Components/helper/mockVehicleData.js

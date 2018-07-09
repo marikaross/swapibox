@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Card.css';
 
-const Card = ({name, homeworld, species, population, terrain, climate, residents, model, starship_class, passengers}) => {
+const Card = ({name, homeworld, species, population, 
+  terrain, climate, residents, model, starship_class, passengers}) => {
   const peopleCard =
     <article className='peopleCard card' key={name}>
       <h2>{name}</h2>
@@ -33,11 +34,11 @@ const Card = ({name, homeworld, species, population, terrain, climate, residents
 
 
   if (homeworld) {
-    return peopleCard
+    return peopleCard;
   } else if (terrain) {
-    return planetCard
+    return planetCard;
   } else {
-    return vehicleCard
+    return vehicleCard;
   }
 };
 

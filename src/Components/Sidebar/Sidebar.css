@@ -5,26 +5,22 @@
   overflow: hidden; }
 
 .scrollContainer {
-  display: flex;
   justify-content: center;
-  height: 800px;
-  perspective: 400px;
+  width: 90%;
+  margin: 20px;
   font-weight: 600;
   letter-spacing: 4px;
   line-height: 150%;
-  text-align: justify;
-  margin: 20px; }
+  text-align: justify; }
 
 .scroll {
-  top: 9999px;
-  position: relative;
-  transform-origin: 50% 100%;
-  animation: crawl 60s linear; }
+  top: 100%;
+  animation: scroller 30s linear infinite; }
 
 @keyframes scroll {
   0% {
-    top: 0;
-    transform: rotateX(20deg) translateZ(0); }
+    top: 100%; }
+  7% {
+    top: 100%; }
   100% {
-    top: -6000px;
-    transform: rotateX(25deg) translateZ(-2500px); } }
+    top: -250%; } }

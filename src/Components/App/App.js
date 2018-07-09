@@ -4,8 +4,8 @@ import CardContainer from '../CardContainer/CardContainer.js';
 import Sidebar from '../Sidebar/Sidebar.js';
 import './App.css';
 import ApiCallers from '../helper/api-caller.js';
-import { cleanPeople, cleanScroll } from '../helper/cleaner.js';
-let apiCaller = new ApiCallers
+import { cleanScroll } from '../helper/cleaner.js';
+let apiCaller = new ApiCallers;
 
 
 class App extends Component {
@@ -27,7 +27,7 @@ class App extends Component {
       .then(results => this.setState({scroll: { ...results }}));
   }
 
- getPeople = async () => {
+  getPeople = async () => {
     this.setState({cards: await apiCaller.findPeople()});
   }
 
@@ -37,7 +37,7 @@ class App extends Component {
   }
 
   getStarships = async ()  => {
-    this.setState({cards: [...await apiCaller.findVehicles()]})
+    this.setState({cards: [...await apiCaller.findVehicles()]});
   }
 
 
@@ -56,7 +56,7 @@ class App extends Component {
             summary={this.state.scroll} 
           />
           <CardContainer 
-          cards={this.state.cards}/>
+            cards={this.state.cards}/>
         </div>
       </div>
     );

@@ -10,10 +10,10 @@ const CardContainer = ({cards}) => {
       {allCards}
     </div>
 
-    )
-}
+  );
+};
 
-export default CardContainer
+export default CardContainer;
 
 
 
@@ -21,5 +21,5 @@ export default CardContainer
 
 
 CardContainer.propTypes = {
-  cards: PropTypes.array.isRequired,
+  cards: PropTypes.array.isRequired
 };

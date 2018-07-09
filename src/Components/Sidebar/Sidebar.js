@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import'./Sidebar.css';
+import './Sidebar.css';
 
 const Sidebar = ({ summary }) => {
   return (
@@ -14,12 +14,12 @@ const Sidebar = ({ summary }) => {
         </section>
       </section>
     </div>
-    )
-}
+  );
+};
 
 export default Sidebar;
 
 
 Sidebar.propTypes = {
-  summary: PropTypes.object.isRequired,
+  summary: PropTypes.object.isRequired
 };

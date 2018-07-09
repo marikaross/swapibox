@@ -10,5 +10,5 @@ Swapibox is a solo project using the Starwars API and React that had a focus on 
 * To install, run `npm install -D`
 
 
-<src="https://github.com/marikaross/swapibox/blob/master/src/images/Screen%20Shot%202018-07-09%20at%201.05.01%20PM.png" >
+<img src="https://github.com/marikaross/swapibox/blob/master/src/images/Screen%20Shot%202018-07-09%20at%201.05.01%20PM.png" >
 

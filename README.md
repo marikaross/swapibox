@@ -1,7 +1,7 @@
 
 ## Swapibox
 
-Swapibox is a solo project using the Starwars API and React that had a focus on multiple API calls and asynchrounous testing. It was completed over a week-long period.
+Swapibox is a solo project using the Starwars API and React that had a focus on multiple API calls and asynchrounous testing. It was completed over a week-long period using create-react-app.
 
 ### Set-Up
 

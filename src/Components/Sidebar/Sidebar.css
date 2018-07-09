@@ -14,13 +14,12 @@
   text-align: justify; }
 
 .scroll {
-  top: 100%;
-  animation: scroller 30s linear infinite; }
+  position: absolute;
+  animation: scroll 100s linear 4s infinite;
+  width: 25%; }
 
 @keyframes scroll {
   0% {
     top: 100%; }
-  7% {
-    top: 100%; }
   100% {
-    top: -250%; } }
+    top: 0%; } }

@@ -6,7 +6,7 @@ const Sidebar = ({ summary }) => {
   return (
     <div className="sidebar">
       <h2 className="longAgo">A long time ago in a galaxy far, far away...</h2>
-      <section className="scrollContainer">
+      <section className="scrollContainer ">
         <section className="scroll">
           <h3>{summary.summary}</h3>
           <h3>{summary.title}</h3>

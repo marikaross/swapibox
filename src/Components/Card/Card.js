@@ -10,7 +10,7 @@ const Card = ({name, homeworld, species, population,
       <h3>homeworld: {homeworld}</h3>
       <h3>species: {species}</h3>
       <h3>population: {population}</h3>
-      <button className='favorites'></button>
+      <button className='favorites favorite-button'>favorite</button>
     </article>
   
   const planetCard = 
@@ -20,7 +20,7 @@ const Card = ({name, homeworld, species, population,
       <h3>climate: {climate}</h3>
       <h3>population: {population}</h3>
       <h3>residents: {residents}</h3>
-      <button className='favorites'></button>
+      <button className='favorites favorite-button'>favorite</button>
     </article>
 
   const vehicleCard = 
@@ -29,7 +29,7 @@ const Card = ({name, homeworld, species, population,
       <h3>model: {model}</h3>
       <h3>class: {starship_class}</h3>
       <h3># of passengers: {passengers}</h3>
-      <button className='favorites'></button>
+      <button className='favorites favorite-button'>favorite</button>
     </article>
 
 

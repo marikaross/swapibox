@@ -1,4 +1,10 @@
-.peopleCard,
-.planetCard,
-.vehicleCard {
-  background-color: chartreuse; }
+article {
+  background-color: #221f20;
+  border: 1px solid #56C0D4;
+  color: #56C0D4;
+  font-weight: 200;
+  width: 20%;
+  height: 30%;
+  border-radius: 12 px;
+  margin: 10px;
+  font-size: 1em; }

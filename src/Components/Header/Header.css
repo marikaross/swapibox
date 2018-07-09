@@ -1,2 +1,23 @@
 .header {
-  background-color: black; }
+  background-color: black;
+  display: block; }
+
+img {
+  width: 30%;
+  margin: 30px;
+  display: block;
+  margin: 0 auto; }
+
+.longAgo {
+  color: #56C0D4; }
+
+.planet-button,
+.people-button,
+.vehicles-button,
+.favorites {
+  background-color: black;
+  border: 2px solid #f8e654;
+  border-radius: 12px;
+  color: #f8e654;
+  font-size: 1.5em;
+  margin: 10px; }

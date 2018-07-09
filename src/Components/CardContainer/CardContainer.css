@@ -1,4 +1,7 @@
 .cardContainer {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row; }
+  flex-direction: row;
+  width: 70%;
+  background-color: black;
+}

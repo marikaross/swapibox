@@ -5,7 +5,7 @@ import './Header.css';
 const Header = (props) => {
   return (
     <div className="header">
-      <h2></h2>
+      <img className="logo" src={require ('../../images/starWarsLogo.jpg')} />
       <button className="people-button" onClick={props.getPeople}>People</button>
       <button className="planet-button" onClick={props.getPlanets}>Planets</button>
       <button className="vehicles-button" onClick={props.getStarships}>Starships</button>

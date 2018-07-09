@@ -1,10 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`header should match the snapshot with all data passed in correctly 1`] = `
+exports[`Card should match the snapshot with all data passed in correctly 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Header />,
+  Symbol(enzyme.__unrendered__): <Card />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -18,35 +18,21 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <img
-          className="logo"
-          src="starWarsLogo.jpg"
-/>,
-        <button
-          className="people-button"
-          onClick={undefined}
->
-          People
-</button>,
-        <button
-          className="planet-button"
-          onClick={undefined}
->
-          Planets
-</button>,
-        <button
-          className="vehicles-button"
-          onClick={undefined}
->
-          Starships
-</button>,
+        <h2 />,
+        <h3>
+          model: 
+</h3>,
+        <h3>
+          class: 
+</h3>,
+        <h3>
+          # of passengers: 
+</h3>,
         <button
           className="favorites"
->
-          Favorites
-</button>,
+/>,
       ],
-      "className": "header",
+      "className": "vehicleCard card",
     },
     "ref": null,
     "rendered": Array [
@@ -55,66 +41,76 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "className": "logo",
-          "src": "starWarsLogo.jpg",
+          "children": undefined,
         },
         "ref": null,
         "rendered": null,
-        "type": "img",
+        "type": "h2",
       },
       Object {
         "instance": null,
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "People",
-          "className": "people-button",
-          "onClick": undefined,
+          "children": Array [
+            "model: ",
+            undefined,
+          ],
         },
         "ref": null,
-        "rendered": "People",
-        "type": "button",
+        "rendered": Array [
+          "model: ",
+          undefined,
+        ],
+        "type": "h3",
       },
       Object {
         "instance": null,
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "Planets",
-          "className": "planet-button",
-          "onClick": undefined,
+          "children": Array [
+            "class: ",
+            undefined,
+          ],
         },
         "ref": null,
-        "rendered": "Planets",
-        "type": "button",
+        "rendered": Array [
+          "class: ",
+          undefined,
+        ],
+        "type": "h3",
       },
       Object {
         "instance": null,
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "Starships",
-          "className": "vehicles-button",
-          "onClick": undefined,
+          "children": Array [
+            "# of passengers: ",
+            undefined,
+          ],
         },
         "ref": null,
-        "rendered": "Starships",
-        "type": "button",
+        "rendered": Array [
+          "# of passengers: ",
+          undefined,
+        ],
+        "type": "h3",
       },
       Object {
         "instance": null,
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "Favorites",
           "className": "favorites",
         },
         "ref": null,
-        "rendered": "Favorites",
+        "rendered": null,
         "type": "button",
       },
     ],
-    "type": "div",
+    "type": "article",
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
@@ -123,35 +119,21 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <img
-            className="logo"
-            src="starWarsLogo.jpg"
-/>,
-          <button
-            className="people-button"
-            onClick={undefined}
->
-            People
-</button>,
-          <button
-            className="planet-button"
-            onClick={undefined}
->
-            Planets
-</button>,
-          <button
-            className="vehicles-button"
-            onClick={undefined}
->
-            Starships
-</button>,
+          <h2 />,
+          <h3>
+            model: 
+</h3>,
+          <h3>
+            class: 
+</h3>,
+          <h3>
+            # of passengers: 
+</h3>,
           <button
             className="favorites"
->
-            Favorites
-</button>,
+/>,
         ],
-        "className": "header",
+        "className": "vehicleCard card",
       },
       "ref": null,
       "rendered": Array [
@@ -160,66 +142,76 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "className": "logo",
-            "src": "starWarsLogo.jpg",
+            "children": undefined,
           },
           "ref": null,
           "rendered": null,
-          "type": "img",
+          "type": "h2",
         },
         Object {
           "instance": null,
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "People",
-            "className": "people-button",
-            "onClick": undefined,
+            "children": Array [
+              "model: ",
+              undefined,
+            ],
           },
           "ref": null,
-          "rendered": "People",
-          "type": "button",
+          "rendered": Array [
+            "model: ",
+            undefined,
+          ],
+          "type": "h3",
         },
         Object {
           "instance": null,
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Planets",
-            "className": "planet-button",
-            "onClick": undefined,
+            "children": Array [
+              "class: ",
+              undefined,
+            ],
           },
           "ref": null,
-          "rendered": "Planets",
-          "type": "button",
+          "rendered": Array [
+            "class: ",
+            undefined,
+          ],
+          "type": "h3",
         },
         Object {
           "instance": null,
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Starships",
-            "className": "vehicles-button",
-            "onClick": undefined,
+            "children": Array [
+              "# of passengers: ",
+              undefined,
+            ],
           },
           "ref": null,
-          "rendered": "Starships",
-          "type": "button",
+          "rendered": Array [
+            "# of passengers: ",
+            undefined,
+          ],
+          "type": "h3",
         },
         Object {
           "instance": null,
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Favorites",
             "className": "favorites",
           },
           "ref": null,
-          "rendered": "Favorites",
+          "rendered": null,
           "type": "button",
         },
       ],
-      "type": "div",
+      "type": "article",
     },
   ],
   Symbol(enzyme.__options__): Object {

@@ -55,7 +55,8 @@ class App extends Component {
           <Sidebar 
             summary={this.state.scroll} 
           />
-          <CardContainer cards={this.state.cards}/>
+          <CardContainer 
+          cards={this.state.cards}/>
         </div>
       </div>
     );

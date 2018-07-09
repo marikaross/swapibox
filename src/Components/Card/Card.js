@@ -19,7 +19,7 @@ const Card = ({name, homeworld, species, population,
       <h3>terrain: {terrain}</h3>
       <h3>climate: {climate}</h3>
       <h3>population: {population}</h3>
-      <h3>residents: {residents}</h3>
+      <h3 className="residents">residents: {residents}</h3>
       <button className='favorites favorite-button'>favorite</button>
     </article>
 
